@@ -1,0 +1,24 @@
+# 6. Teoria degli errori
+
+Ad ogni risultato è necessario associare un errore che fornisca una misura dell'affidabilità della determinazione effettuata. Il risultato ottenuto non rappresenta, in generale, il valore esatto; è più opportuno indicare l'intervallo entro il quale si ritiene che il valore esatto possa rientrare. In questo contesto, si parla di un **valore centrale** e di un **errore associato**.
+
+Considerando un esempio di quanto appena descritto, se, su un reticolo di dimensione fissata e con una probabilità di colorazione dei siti determinata, si confrontano le probabilità di percolazione da sinistra a destra (LR) e dall'alto verso il basso (TB), ci si aspetterebbe che il calcolo basato sulle frequenze restituisca lo stesso valore per entrambe le probabilità. Tuttavia, il quadro concettuale risulta leggermente più complesso:
+
+1. È stato dimostrato che la probabilità di un dato evento equivale al valore medio della sua variabile caratteristica*
+2. Dalla legge dei grandi numeri deriva che la frequenza di realizzazione dell'evento, calcolata come media aritmetica della variabile caratteristica, converge in probabilità alla probabilità dell'evento stesso.
+3. Non si ha motivo di attendersi un'asimmetria tra la direzione orizzontale e quella verticale nel problema della percolazione; pertanto, ci si aspetta che le probabilità di percolazione LR e TB siano uguali, sebbene le frequenze calcolate possano differire.
+4. Inoltre, esperimenti numerici distinti non restituiscono mai risultati identici.
+
+\* Una variabile caratteristica è una **variabile aleatoria** che rappresenta l'esito di un esperimento casuale
+
+Tutto ciò risulta perfettamente comprensibile se si assume il punto di vista enunciato sopra: i risultati attesi uguali (calcolo delle probabilità LR e TB, risultati ottenuti in esperimenti successivi, ecc.) sono compatibili entro l'errore assegnato loro.
+
+Il calcolo dell'errore può seguire questa procedura: viene calcolata la deviazione standard delle variabili caratteristiche (utilizzando, ad esempio, la funzione $\texttt{std}$ di Matlab). Questo valore viene poi diviso per la radice quadrata del numero di esperimenti effettuati
+
+Questo approccio è coerente con quanto dimostrato: la varianza della media aritmetica è infatti pari alla varianza della variabile osservata divisa per il numero di osservazioni. Il fatto di aver utilizzato la deviazione standard anziché la varianza è giustificato da considerazioni dimensionali, poiché la varianza di una grandezza fisica (ad esempio, una lunghezza) risulta in unità al quadrato, rendendola inadeguata come misura di errore.
+
+Ricordiamo che il teorema del limite centrale stabilisce che la somma di variabili aleatorie, per un numero elevato di addendi, tende a seguire una distribuzione gaussiana. Questo risultato riveste grande utilità pratica:
+
+- Non solo la varianza della media aritmetica è inversamente proporzionale al numero di osservazioni, ma anche per un numero sufficientemente elevato di osservazioni, la media aritmetica è distribuita gaussianamente. 
+
+Seguendo questo percorso concettuale, l'aspettativa che i valori delle probabilità di percolazione LR e TB siano compatibili entro gli errori associati è stata debitamente giustificata.
