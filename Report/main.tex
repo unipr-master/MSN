@@ -1,0 +1,67 @@
+
+\documentclass[11pt]{article}
+\usepackage[a4paper, tmargin=0.75in, lmargin=0.80in, rmargin=0.80in, bmargin=1in]{geometry}
+
+\usepackage{hyperref}
+%\usepackage{multicol}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,      
+    urlcolor=blue,
+    citecolor=black,
+}
+%\usepackage[numbers,sort&compress]{natbib} % for a numerical citation list
+\usepackage{natbib} % to cite references by surname and year
+\usepackage{graphicx}
+\usepackage{float}
+\pagestyle{empty}
+
+\newcommand{\studentname}{Alessio Russo}
+\newcommand{\studentnumber}{12345678}
+\newcommand{\course}{Scienze Informatiche}
+\newcommand{\theme}{Percolazione}
+%\newcommand{\projecttitle}{Something about Physics and/or Mathematics}
+%\newcommand{\supervisor}{Dr A. N. Other}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+
+\begin{center}
+{\Huge{Modellazioni e Simulazioni Numeriche}} \\
+%\vspace{2mm}
+%{\Large{Relazione sul tema percolazione}} \\
+%\vspace{2mm}
+%{\Large{Alessio Russo}} \\
+%\vspace{1mm}
+%{\Large{Università degli studi di Parma}}
+\end{center}
+
+\vspace{5mm}
+\hrule
+\vspace{1mm}
+\hrule
+
+\vspace{3mm}
+\begin{tabular}{ll} 
+Studente:                     & {\studentname}   \\ 
+Matricola:           & {\studentnumber} \\ 
+Corso di studi:           & {\course}  \\ 
+Tema:           & {\theme}  \\ 
+\end{tabular}
+
+\vspace{3mm}
+\hrule
+\vspace{1mm}
+\hrule
+
+\input{intro.tex}
+
+
+\end{document}
