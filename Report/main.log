@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.26)  27 MAY 2025 17:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.5.26)  28 MAY 2025 11:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -184,14 +184,84 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip50
 )
+(/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2023/03/30 v1.9f multicolumn formatting (FMi)
+\c@tracingmulticols=\count276
+\mult@box=\box51
+\multicol@leftmargin=\dimen153
+\c@unbalance=\count277
+\c@collectmore=\count278
+\doublecol@number=\count279
+\multicoltolerance=\count280
+\multicolpretolerance=\count281
+\full@width=\dimen154
+\page@free=\dimen155
+\premulticols=\dimen156
+\postmulticols=\dimen157
+\multicolsep=\skip51
+\multicolbaselineskip=\skip52
+\partial@page=\box52
+\last@line=\box53
+\mc@boxedresult=\box54
+\maxbalancingoverflow=\dimen158
+\mult@rightbox=\box55
+\mult@grightbox=\box56
+\mult@firstbox=\box57
+\mult@gfirstbox=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\@tempa=\box65
+\@tempa=\box66
+\@tempa=\box67
+\@tempa=\box68
+\@tempa=\box69
+\@tempa=\box70
+\@tempa=\box71
+\@tempa=\box72
+\@tempa=\box73
+\@tempa=\box74
+\@tempa=\box75
+\@tempa=\box76
+\@tempa=\box77
+\@tempa=\box78
+\@tempa=\box79
+\@tempa=\box80
+\@tempa=\box81
+\@tempa=\box82
+\@tempa=\box83
+\@tempa=\box84
+\@tempa=\box85
+\@tempa=\box86
+\@tempa=\box87
+\@tempa=\box88
+\@tempa=\box89
+\@tempa=\box90
+\@tempa=\box91
+\@tempa=\box92
+\@tempa=\box93
+\@tempa=\box94
+\c@minrows=\count282
+\c@columnbadness=\count283
+\c@finalcolumnbadness=\count284
+\last@try=\dimen159
+\multicolovershoot=\dimen160
+\multicolundershoot=\dimen161
+\mult@nat@firstbox=\box95
+\colbreak@box=\box96
+\mc@col@check@num=\count285
+)
 Package hyperref Info: Option `colorlinks' set `true' on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip51
-\bibsep=\skip52
+\bibhang=\skip53
+\bibsep=\skip54
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count276
+\c@NAT@ctr=\count286
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
@@ -210,47 +280,53 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
 File: pdftex.def 2022/09/22 v1.2b Graphics/color driver for pdftex
 ))
-\Gin@req@height=\dimen153
-\Gin@req@width=\dimen154
+\Gin@req@height=\dimen162
+\Gin@req@width=\dimen163
 )
 (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count277
+\c@float@type=\count287
 \float@exts=\toks19
-\float@box=\box51
+\float@box=\box97
 \@float@everytoks=\toks20
-\@floatcapt=\box52
+\@floatcapt=\box98
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count278
-\l__pdf_internal_box=\box53
+\l__color_backend_stack_int=\count288
+\l__pdf_internal_box=\box99
 )
 (./main.aux
+
+LaTeX Warning: Label `fig:basegrid' multiply defined.
+
+
+LaTeX Warning: Label `fig:basegrid' multiply defined.
+
 
 LaTeX Warning: Label `fig:basegrid' multiply defined.
 
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 33.
-LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -295,7 +371,7 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 Package color Info: Driver file: pdftex.def on input line 149.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 33.
+Package hyperref Info: Link coloring ON on input line 31.
  (./main.out)
 (./main.out)
 \@outlinefile=\write3
@@ -303,16 +379,16 @@ Package hyperref Info: Link coloring ON on input line 33.
 
  (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count279
-\scratchdimen=\dimen155
-\scratchbox=\box54
-\nofMPsegments=\count280
-\nofMParguments=\count281
+\scratchcounter=\count289
+\scratchdimen=\dimen164
+\scratchbox=\box100
+\nofMPsegments=\count290
+\nofMParguments=\count291
 \everyMPshowfont=\toks21
-\MPscratchCnt=\count282
-\MPscratchDim=\dimen156
-\MPnumerator=\count283
-\makeMPintoPDFobject=\count284
+\MPscratchCnt=\count292
+\MPscratchDim=\dimen165
+\MPnumerator=\count293
+\makeMPintoPDFobject=\count294
 \everyMPtoPDFconversion=\toks22
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -324,39 +400,44 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 52.
+(Font)              <10.95> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 52.
+(Font)              <8> on input line 50.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 52.
+(Font)              <6> on input line 50.
 
 (./intro.tex
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 15.
+(Font)              <5> on input line 11.
 
-Overfull \hbox (11.90866pt too wide) in paragraph at lines 15--48
+Overfull \hbox (8.90848pt too wide) in paragraph at lines 11--44
  [][] 
  []
 
-<images/basegrid.png, id=8, 421.0932pt x 315.579pt>
+<images/basegrid.png, id=8, 351.2322pt x 281.853pt>
 File: images/basegrid.png Graphic file (type png)
 <use images/basegrid.png>
-Package pdftex.def Info: images/basegrid.png  used on input line 52.
-(pdftex.def)             Requested size: 240.93773pt x 180.57048pt.
+Package pdftex.def Info: images/basegrid.png  used on input line 48.
+(pdftex.def)             Requested size: 216.84248pt x 174.01163pt.
 
-Overfull \hbox (15.65958pt too wide) in paragraph at lines 66--99
+Overfull \hbox (39.75482pt too wide) in paragraph at lines 63--96
  [] 
  []
 
-<images/labels.png, id=9, 421.0932pt x 315.579pt>
+<images/labels.png, id=10, 350.2686pt x 278.9622pt>
 File: images/labels.png Graphic file (type png)
 <use images/labels.png>
-Package pdftex.def Info: images/labels.png  used on input line 104.
-(pdftex.def)             Requested size: 240.93773pt x 180.57048pt.
+Package pdftex.def Info: images/labels.png  used on input line 101.
+(pdftex.def)             Requested size: 216.84248pt x 172.69937pt.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/basegrid.png (PNG
- copy)> <./images/labels.png (PNG copy)>]) [2] (./main.aux)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./images/basegrid.png> <./
+images/labels.png>])
+Underfull \hbox (badness 10000) in paragraph at lines 141--61
+
+ []
+
+[2] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -369,23 +450,23 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 183E088F371596700CE6C924FEC401AF;189.
  ) 
 Here is how much of TeX's memory you used:
- 9319 strings out of 474222
- 143665 string characters out of 5748733
- 2011975 words of memory out of 5000000
- 31476 multiletter control sequences out of 15000+600000
+ 9453 strings out of 474222
+ 145889 string characters out of 5748733
+ 2012975 words of memory out of 5000000
+ 31608 multiletter control sequences out of 15000+600000
  562188 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,659b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,11n,79p,804b,435s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
 onts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on main.pdf (2 pages, 103830 bytes).
+Output written on main.pdf (2 pages, 107685 bytes).
 PDF statistics:
- 56 PDF objects out of 1000 (max. 8388607)
- 37 compressed objects within 1 object stream
- 6 named destinations out of 1000 (max. 500000)
+ 57 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
+ 4 named destinations out of 1000 (max. 500000)
  19 words of extra memory for PDF output out of 10000 (max. 10000000)
 
