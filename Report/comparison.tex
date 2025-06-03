@@ -1,0 +1,23 @@
+\section{Confronto tra algoritmi naive e HK76}
+
+L'algoritmo di Hoshen-Kopelman (HK76, indicato in \textit{blu}) ha mostrato una significativa efficienza computazionale superiore rispetto all'algoritmo di etichettatura naive (indicato in \textit{arancione}), precedentemente implementato. Questa valutazione è stata condotta attraverso due diverse analisi: la prima ha considerato il tempo di calcolo mantenendo costante la probabilità di colorazione dei siti e variando la dimensione del reticolo, mentre la seconda ha studiato il comportamento opposto, ovvero il tempo di calcolo mantenendo costante la dimensione del reticolo e variando la probabilità di colorazione dei siti.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/compare\_t}
+	\caption{Tempo di esecuzione in funzione della dimensione del reticolo per gli algoritmi HK76 e naive.}
+	\label{fig:comparet}
+\end{figure}
+\noindent
+Nel primo caso, è stata fissata una probabilità di colorazione dei siti pari al $50\%$, variando la dimensione del reticolo bidimensionale nell'intervallo compreso tra $1000$ e $10000$, con un incremento di $1000$, per un totale di $10$ configurazioni. La figura \ref{fig:comparet} mostra che, all'aumentare della dimensione del reticolo, l'algoritmo HK76 offre prestazioni migliori rispetto all'algoritmo naive in termini di tempo di esecuzione.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.8\linewidth]{images/compare\_p}
+	\caption{Tempo di esecuzione in funzione della probabilità di colorazione per gli algoritmi HK76 e naive.}
+	\label{fig:comparep}
+\end{figure}
+
+\noindent
+Nel secondo caso, invece, la dimensione del reticolo è stata mantenuta fissa a $1000\times1000$, mentre la probabilità di colorazione dei siti è stata variata da $0.1$ a $1$, con incrementi di $0.1$, per un totale di $10$ esperimenti. La Figura \ref{fig:comparep} evidenzia l'algoritmo HK76 migliori nettamente rispetto alla versione naive, il cui tempo cresce all'aumentare della probabilità di colorazione dei siti, mentre quello di HK76 rimane pressoché costante
+
+

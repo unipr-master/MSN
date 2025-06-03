@@ -17,6 +17,24 @@
 \usepackage{float}
 \pagestyle{empty}
 
+
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{framed}
+
+\usepackage[italian]{babel}
+
+\lstset{
+	basicstyle=\ttfamily\small,
+	keywordstyle=\color{blue},
+	commentstyle=\color{gray},
+	stringstyle=\color{red},
+	backgroundcolor=\color{gray!10},
+	frame=single,
+	breaklines=true,
+	showstringspaces=false
+}
+
 \newcommand{\studentname}{Alessio Russo}
 \newcommand{\studentnumber}{376856}
 \newcommand{\course}{Scienze Informatiche}
@@ -32,7 +50,7 @@
 
 
 \begin{center}
-{\Huge{Percolazione}} \\
+{\Huge{Percolazione nei reticoli quadrati bidimensionali}} \\
 %\vspace{2mm}
 %{\Large{Relazione sul tema percolazione}} \\
 %\vspace{2mm}
@@ -57,7 +75,9 @@
 \vspace{1mm}
 \hrule
 
-\input{intro.tex}
+\input{hoshen-kopelman.tex}
+\input{comparison.tex}
+\input{perc.tex}
 
 
 \end{document}
