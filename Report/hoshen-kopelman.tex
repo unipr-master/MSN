@@ -1,12 +1,11 @@
 \section{Algoritmo di Hoshen-Kopelman}
-L’algoritmo di Hoshen-Kopelman (HK76) è una tecnica di etichettatura multipla dei cluster. Il reticolo viene visitato sito per sito per colonne, partendo dallo spigolo in alto a sinistra per arrivare a quello in basso a destra. Si prenda, ad esempio, il reticolo
-in figura
+L’algoritmo di Hoshen-Kopelman (HK76) è una tecnica di etichettatura multipla dei cluster. Il reticolo viene visitato sito per sito per colonne, partendo dallo spigolo in alto a sinistra per arrivare a quello in basso a destra. Si prenda, ad esempio, il reticolo in Figura \ref{fig:basegrid}
 \begin{figure}[H]
 	\centering
 	\scriptsize % Riduce la dimensione del testo
 	\setlength{\tabcolsep}{5.4pt} % Riduce lo spazio tra le colonne
-	\renewcommand{\arraystretch}{1.3} % Riduce lo spazio verticale tra le righe
-	\begin{minipage}{0.45\textwidth}
+	\renewcommand{\arraystretch}{1.2} % Riduce lo spazio verticale tra le righe
+	\begin{minipage}{0.4\textwidth}
 		\centering
 		\begin{tabular}{|*{15}{c|}}
 			\hline
@@ -43,21 +42,21 @@ in figura
 		\end{tabular}
 	\end{minipage}
 	\hfill
-	\begin{minipage}{0.45\textwidth}
+	\begin{minipage}{0.44\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{images/basegrid}
-		\label{fig:basegrid}
 	\end{minipage}
+	\label{fig:basegrid}
+	\caption{Esempio di reticolo quadrato $15 \times 15$ con siti colorati e non colorati}
 \end{figure}
 \noindent
-Durante la visita del reticolo, quando si incontra un sito colorato, allora: \textbf{(1)} Se il sito non è connesso ad altri siti colorato sopra o a sinistra, si inizia un nuovo cluster, a cui viene assegnata una \texttt{label} \textbf{(2)} Se c’è un primo vicino sopra o a sinistra colorato (uno solo dei due), il sito viene aggiunto al cluster del primo vicino colorato \textbf{(3)}Se i suoi primi vicini sono entrambi colorati, ma appartengono allo stesso cluster, il sito viene aggiunto al cluster dei primi vicini \textbf{(4)} Se i suoi primi vicini sono entrambi colorati, e non appartengono allo stesso cluster, il sito viene aggiunto al cluster con la \texttt{label} minore. Ad esempio, il cluster associati al reticolo precedente sono
-mostrati in figura
+Durante la visita del reticolo, quando si incontra un sito colorato, allora: \textbf{(1)} Se il sito non è connesso ad altri siti colorato sopra o a sinistra, si inizia un nuovo cluster, a cui viene assegnata una \texttt{label} \textbf{(2)} Se c’è un primo vicino sopra o a sinistra colorato (uno solo dei due), il sito viene aggiunto al cluster del primo vicino colorato \textbf{(3)} Se i suoi primi vicini sono entrambi colorati, ma appartengono allo stesso cluster, il sito viene aggiunto al cluster dei primi vicini \textbf{(4)} Se i suoi primi vicini sono entrambi colorati, e non appartengono allo stesso cluster, il sito viene aggiunto al cluster con la \texttt{label} minore. 
 \begin{figure}[H]
 	\centering
 	\scriptsize % Riduce la dimensione del testo
 	\setlength{\tabcolsep}{3.5pt} % Riduce lo spazio tra le colonne
-	\renewcommand{\arraystretch}{1.3} % Riduce lo spazio verticale tra le righe
-	\begin{minipage}{0.4\textwidth}
+	\renewcommand{\arraystretch}{1.2} % Riduce lo spazio verticale tra le righe
+	\begin{minipage}{0.3\textwidth}
 		\centering
 		\begin{center}
 			\begin{tabular}{|*{15}{c|}}
@@ -99,9 +98,14 @@ mostrati in figura
 	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{images/labels}
-		\label{fig:basegrid}
+		
 	\end{minipage}
+	\caption{Esempio di etichettatura dei cluster con l’algoritmo di Hoshen-Kopelman}
+	\label{fig:clustered}
 \end{figure}
+\noindent
+Ad esempio, il cluster associati al reticolo in Figura \ref{fig:basegrid} sono mostrati in Figura \ref{fig:clustered}.
+\\\\
 \noindent
 Tuttavia, quando si incontra un caso come quello descritto nel punto \textbf{(4)}, occorre  memorizzare che i due cluster sono in realtà lo stesso cluster. Questo viene fatto usando un vettore chiamato \textbf{Label of Label} (\texttt{LofL}), che contiene tutta l’informazione necessaria sui label dei cluster. In particolare, il modulo \texttt{HKclass}: 
 per un \textit{good label}, memorizza la taglia del cluster; 
@@ -139,7 +143,7 @@ per \textit{bad label}, memorizza qual è il vero cluster label a cui questo lab
 
 \vspace{15px}
 \noindent
-Tuttavia, l’algoritmo HK restituisce in modo corretto le taglie dei cluster, ma non garantisce che tutti i siti di un fissato cluster abbiano lo stesso valore. Per questo motivo, al fine di identificare la presenza di cluster percolanti, effettuiamo una rilabelizzazione successiva. Di seguito ne è mostrato un esempio.
+Tuttavia, l’algoritmo HK restituisce in modo corretto le taglie dei cluster, ma non garantisce che tutti i siti di un fissato cluster abbiano lo stesso valore. Per questo motivo, effettuiamo una rietichettatura successiva. La Figura 3 ne mostra un esempio.
 
 \begin{figure}[H]
 	\centering
@@ -188,20 +192,21 @@ Tuttavia, l’algoritmo HK restituisce in modo corretto le taglie dei cluster, m
 	\begin{minipage}{0.45\textwidth}
 		\centering
 		\includegraphics[width=\linewidth]{images/re-labelled}
-		\label{fig:basegrid}
 	\end{minipage}
+	\label{fig:relabelled}
+	\caption{Esempio di rietichettatura dei cluster con etichette uniformi per ciascun gruppo}
 \end{figure}
 \noindent
 A questo punto, l'obiettivo è determinare se esistono cluster percolanti all'interno del reticolo, ossia se esiste almeno un'etichetta condivisa tra la prima e l'ultima riga (percolazione verticale) e tra la prima e l'ultima colonna (percolazione orizzontale). Per fare ciò, possiamo sviluppare un algoritmo che, basandosi sull'estrazione delle etichette \textbf{uniche} presenti lungo i bordi della matrice, e mediante l'utilizzo dell'operazione \texttt{intersect},  verifica l'esistenza di almeno una etichetta comune tra i bordi opposti. Se tale etichetta è presente, viene restituito \texttt{true} per il tipo di percolazione considerato, altrimenti \texttt{false}.
 \\\\
 \noindent
-Tuttavia, poiché ci interessa esclusivamente determinare il cluster di appartenenza della prima e dell’ultima riga e colonna per valutare la percolazione, è sufficiente rilabelare solo questi elementi, ignorando il centro del reticolo e risparmiando così tempo di calcolo. La Figura \ref{fig:relabelled-edge} ne mostra un esempio.
+Si noti che, poiché ci interessa esclusivamente determinare il cluster di appartenenza della prima e dell’ultima riga e colonna per valutare la percolazione, è sufficiente rietichettare solo questi elementi, ignorando il centro del reticolo e risparmiando così tempo di calcolo. La Figura \ref{fig:relabelled-edge} ne mostra un esempio.
 \begin{figure}
 	\centering
 	\includegraphics[width=0.7\linewidth]{images/re-labelled-edge}
-	\caption{Esempio di ri-labeling limitato ai bordi del reticolo}
+	\caption{Esempio di rietichettatura dei soli bordi per il test di percolazione}
 	\label{fig:relabelled-edge}
 \end{figure}
 \\\\
 \noindent
-Concludiamo dicendo che l'analisi della correttezza dell'implementazione proposta è stata effettuata non soltanto tramite test individuali sul singolo algoritmo, ma anche attraverso un confronto diretto con l'algoritmo naive presentato a lezione. Nello specifico, è stato generato un reticolo bidimensionale di dimensioni $100 \times 100$, con una probabilità di colorazione dei siti pari al 50\%. Tale reticolo è stato analizzato prima con l'algoritmo naive e successivamente con l'algoritmo HK76, confrontando i risultati ottenuti per la percolazione verticale (top-bottom) e orizzontale (left-right). Questo confronto è stato ripetuto $10.000$ volte, e in tutti i casi i risultati forniti dai due algoritmi sono stati coincidenti. 
+Concludiamo dicendo che l'analisi della correttezza dell'implementazione proposta è stata effettuata non soltanto tramite test individuali sul singolo algoritmo, ma anche attraverso un confronto diretto con l'algoritmo naive presentato a lezione. Nello specifico, è stato generato un reticolo quadrato di taglia $100$, con una probabilità di colorazione dei siti pari al $60\%$. Tale reticolo è stato analizzato prima con l'algoritmo naive e successivamente con l'algoritmo HK76, confrontando i risultati ottenuti per la percolazione verticale (top-bottom) e orizzontale (left-right). Questo confronto è stato ripetuto $10.000$ volte, e in tutti i casi i risultati forniti dai due algoritmi sono stati coincidenti. 
