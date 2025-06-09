@@ -1,0 +1,86 @@
+\subsection{Calcolo di $P_{1}$}
+
+La quantità $P_1$ viene calcolata come rapporto tra la taglia del cluster più grande ($s_{max}$) e il numero totale di siti presenti nel reticolo ($L^2$):
+\vspace{4px}
+\begin{equation}
+	P_1 = \frac{s_{max}}{L^2}
+\end{equation}
+
+\vspace{4px}
+\noindent
+Dal punto di vista probabilistico, $P_1$ rappresenta la frazione dell'intero reticolo occupata dal cluster dominante. Quando $p_{col}$ è molto basso, i cluster tendono ad essere piccoli e isolati, quindi $P_1$ assume valori trascurabili. Ma man mano che $p_{col}$ si avvicina alla soglia critica, $P_1$ cresce rapidamente: questo riflette la formazione di cluster massicci, capaci di connettere porzioni opposte del reticolo. Di seguito sono riportati i valori ottenuti in fase di simulazione
+
+\vspace{15px}
+\noindent
+\begin{tabular}{|c|*{11}{c|}}
+	\hline
+	\textbf{} & \textbf{0.55} & \textbf{0.56} & \textbf{0.57} & \textbf{0.58} & \textbf{0.59} & \textbf{0.60} & \textbf{0.61} & \textbf{0.62} & \textbf{0.63} & \textbf{0.64} & \textbf{0.65} \\
+	\hline
+	\textbf{100}  & 0.07 & 0.10 & 0.13 & 0.16 & 0.26 & 0.33 & 0.41 & 0.48 & 0.53 & 0.57 & 0.60 \\
+	\hline
+	\textbf{300}  & 0.02 & 0.03 & 0.05 & 0.08 & 0.19 & 0.37 & 0.46 & 0.54 & 0.57 & 0.59 & 0.61 \\
+	\hline
+	\textbf{1000} & 0.00 & 0.00 & 0.01 & 0.03 & 0.12 & 0.42 & 0.51 & 0.55 & 0.58 & 0.60 & 0.62 \\
+	\hline
+\end{tabular}
+
+\vspace{15px}
+\noindent
+e i relativi errori
+
+\subsection{Calcolo di $P_{2}$}
+
+La seconda quantità, $P_2$, mantiene lo stesso numeratore ($s_{max}$) ma usa come denominatore il valore atteso dei siti occupati ($p_{col} \cdot L^2$):
+
+\vspace{4px}
+\begin{equation}
+P_2 = \frac{s_{max}}{p_{col} \cdot L^2}
+\end{equation}
+
+\vspace{4px}
+\noindent
+Questa formulazione permette di interpretare $P_2$ come la frazione dei siti "potenzialmente occupati" che appartiene al cluster più grande. In pratica, si osserva quanto il cluster percolante è significativo rispetto al materiale disponibile. Un valore elevato di $P_2$ indica che il cluster dominante raccoglie una parte consistente dei siti teoricamente colorati. Vicino alla soglia, anche $P_2$ mostra una transizione netta, che può essere usata come indicatore della percolazione. Di seguito sono riportati i valori ottenuti in fase di simulazione
+
+\vspace{15px}
+\noindent
+\begin{tabular}{|c|*{11}{c|}}
+	\hline
+	\textbf{} & \textbf{0.55} & \textbf{0.56} & \textbf{0.57} & \textbf{0.58} & \textbf{0.59} & \textbf{0.60} & \textbf{0.61} & \textbf{0.62} & \textbf{0.63} & \textbf{0.64} & \textbf{0.65} \\
+	\hline
+	\textbf{100}  & 0.12 & 0.18 & 0.23 & 0.28 & 0.44 & 0.55 & 0.68 & 0.77 & 0.85 & 0.89 & 0.92 \\
+	\hline
+	\textbf{300}  & 0.03 & 0.05 & 0.08 & 0.14 & 0.33 & 0.61 & 0.75 & 0.86 & 0.90 & 0.93 & 0.94 \\
+	\hline
+	\textbf{1000} & 0.01 & 0.01 & 0.02 & 0.05 & 0.20 & 0.71 & 0.83 & 0.88 & 0.91 & 0.93 & 0.95 \\
+	\hline
+\end{tabular}
+
+\vspace{15px}
+\noindent
+e i relativi errori
+
+\subsection{Calcolo di $P_{3}$}
+
+Nel calcolo di $P_3$, il numeratore è sempre $s_{max}$, ma il denominatore cambia nuovamente: si utilizza il numero effettivo di siti colorati nel reticolo, cioè la somma delle taglie di tutti i cluster presenti:
+
+\begin{equation}
+P_3 = \frac{s_{max}}{\sum_{s} s \cdot n_s}
+\end{equation}
+
+Questa quantità riflette la frazione di siti occupati che appartengono al solo cluster dominante. È quindi una misura “interna” al sistema: tra tutti i siti effettivamente colorati, quanti sono coinvolti nel cluster principale? A valori bassi di $p_{col}$, il sistema è disperso e $P_3$ è piccolo. Attorno alla soglia, il valore cresce bruscamente, segnalando che il cluster dominante comincia ad assorbire gran parte dei siti attivi. Sopra la soglia, $P_3$ tende rapidamente a 1.
+
+Questa crescita è indicativa del passaggio da una fase dominata da piccoli cluster a una dominata da uno solo, molto esteso, coerentemente con la definizione di percolazione su reticoli infiniti.
+
+\subsection{Calcolo di $RACS$}
+
+La misura $RACS$ (Reduced Average Cluster Size) si basa su una media pesata delle taglie dei cluster, **escludendo** esplicitamente il cluster più grande. È definita come:
+
+\begin{equation}
+	RACS = \frac{\sum\limits_{s < s_{max}} s^2 \cdot n_s}{\sum\limits_{s < s_{max}} s \cdot n_s}
+\end{equation}
+
+Qui si ha una vera e propria media della taglia dei cluster, con pesi proporzionali alla taglia stessa. L'esclusione del cluster più grande è fondamentale: vicino alla soglia di percolazione, questo cluster raccoglie la gran parte dei siti occupati, rendendo il sistema fortemente sbilanciato. Rimuovendolo, è possibile osservare cosa accade nella "popolazione" restante di cluster minori.
+
+Dal punto di vista interpretativo, $RACS$ consente di evidenziare il comportamento critico: crescendo con $p_{col}$, $RACS$ raggiunge un massimo in prossimità della soglia, per poi diminuire quando il sistema entra in fase percolante e il cluster dominante diventa preponderante. Questo massimo è un indicatore utile per identificare la transizione.
+
+In un reticolo di taglia infinita, dove non si può più parlare di percolazione da un bordo all'altro, $RACS$ (insieme a $P_3$) offre un’alternativa concettuale per descrivere il fenomeno: la transizione non è più geometrica ma statistica, legata all'emergere di un cluster infinito che assorbe la maggior parte della massa disponibile.

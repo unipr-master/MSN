@@ -2,8 +2,7 @@
 
 ---
 **Indice**
-```table-of-contents
-```
+
 ---
 
 ## Spazio degli esiti ed eventi
