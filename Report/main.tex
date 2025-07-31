@@ -17,23 +17,31 @@
 \usepackage{float}
 \pagestyle{empty}
 
-
 \usepackage{listings}
 \usepackage{xcolor}
-\usepackage{framed}
+
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{backgray}{rgb}{0.95,0.95,0.95}
+\definecolor{keywordcolor}{rgb}{0.0,0.0,0.6}
+\definecolor{stringcolor}{rgb}{0.58,0,0.82}
+
+\lstdefinestyle{matlabstyle}{
+	backgroundcolor=\color{backgray},
+	commentstyle=\color{codegray}\itshape,
+	keywordstyle=\color{keywordcolor}\bfseries,
+	numberstyle=\tiny\color{codegray},
+	stringstyle=\color{stringcolor},
+	basicstyle=\ttfamily\footnotesize,
+	breaklines=true,
+	captionpos=b,
+	numbers=left,
+	numbersep=5pt,
+	showstringspaces=false,
+	language=Matlab
+}
 
 \usepackage[italian]{babel}
 
-\lstset{
-	basicstyle=\ttfamily\small,
-	keywordstyle=\color{blue},
-	commentstyle=\color{gray},
-	stringstyle=\color{red},
-	backgroundcolor=\color{gray!10},
-	frame=single,
-	breaklines=true,
-	showstringspaces=false
-}
 
 \newcommand{\studentname}{Alessio Russo}
 \newcommand{\studentnumber}{376856}

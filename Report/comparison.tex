@@ -1,14 +1,14 @@
-\section{Confronto tra algoritmi naive e HK76}
+\section{Confronto prestazionale tra l'algoritmo naive e HK76}
+Il confronto prestazionale (dal punto di vista temporale) tra l'algoritmo di Hoshen-Kopelman (\textit{blu}) e quello di etichettatura naive (\textit{arancione}), precedentemente implementato, è stato condotto attraverso due diverse analisi: la prima ha considerato il tempo di calcolo richiesto per l'esecuzione degli algoritmi mantenendo costante la probabilità di colorazione dei siti e variando la dimensione del reticolo; la seconda, invece, ha analizzato il tempo di calcolo mantenendo costante la dimensione del reticolo e variando la probabilità di colorazione dei siti.
 
-L'algoritmo di Hoshen-Kopelman (HK76, indicato in \textit{blu}) ha mostrato una significativa efficienza computazionale superiore rispetto all'algoritmo di etichettatura naive (indicato in \textit{arancione}), precedentemente implementato. Questa valutazione è stata condotta attraverso due diverse analisi: la prima ha considerato il tempo di calcolo mantenendo costante la probabilità di colorazione dei siti e variando la dimensione del reticolo, mentre la seconda ha studiato il comportamento opposto, ovvero il tempo di calcolo mantenendo costante la dimensione del reticolo e variando la probabilità di colorazione dei siti.
-\begin{figure}[H]
+\begin{figure}
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/compare\_t}
+	\includegraphics[width=0.85\linewidth]{images/compare\_t}
 	\caption{Tempo di esecuzione in funzione della dimensione del reticolo per gli algoritmi HK76 e naive.}
 	\label{fig:comparet}
 \end{figure}
 \subsection{Confronto con probabilità costante e taglia variabile}
-Nel primo caso, è stata fissata una probabilità di colorazione dei siti pari al $60\%$, variando la dimensione del reticolo quadrato nell'intervallo compreso tra $100$ e $1000$, con incrementi di $100$, per un totale di $10$ configurazioni. La Figura \ref{fig:comparet} mostra i tempi medi di esecuzione dell'algoritmo, calcolati eseguendo ciascuna configurazione 50 volte. Si noti come, all’aumentare della dimensione del reticolo, l’algoritmo HK76 offra prestazioni migliori rispetto all’algoritmo naive in termini di tempo di esecuzione. Di seguito sono riportati i tempi medi di esecuzione:
+Nel primo caso è stata fissata una probabilità di colorazione dei siti pari al $60\%$, variando la dimensione del reticolo quadrato nell'intervallo compreso tra $100$ e $1000$, con incrementi di $100$, per un totale di $10$ configurazioni. La Figura~\ref{fig:comparet} mostra i tempi medi di esecuzione degli algoritmi, calcolati eseguendo ciascuna configurazione per 50 volte. Si osservi come, all’aumentare della dimensione del reticolo, l’algoritmo HK76 offra prestazioni temporali migliori rispetto all’algoritmo naive. Di seguito sono riportati i tempi medi di esecuzione:
 
 \vspace{15px}
 \noindent
@@ -19,8 +19,7 @@ Nel primo caso, è stata fissata una probabilità di colorazione dei siti pari a
 	\textbf{naive} & 0.0023  &  0.0090  &  0.0199 &   0.0354 &   0.0552  &  0.0806 &   0.1097  &  0.1482 &   0.1877  &  0.2383\\
 	\hline
 \end{tabular}
-
-\vspace{15px}
+\newpage
 \noindent
 e i relativi errori (da moltiplicare per $10^{-3}$):
 
@@ -35,15 +34,20 @@ e i relativi errori (da moltiplicare per $10^{-3}$):
 \end{tabular}
 
 \subsection{Confronto con taglia costante e probabilità variabile}
-Nel secondo caso, invece, la dimensione del reticolo è stata mantenuta fissa a $500$, mentre la probabilità di colorazione dei siti è stata variata da $0{,}1$ a $1$, con incrementi di $0{,}1$, per un totale di $10$ esperimenti. 
+Nel secondo caso, invece, la dimensione del reticolo è stata mantenuta fissa a $500$, mentre la probabilità di colorazione dei siti è stata variata da $0.1$ a $1$, con incrementi di $0.1$, per un totale di $10$ esperimenti. 
+
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\linewidth]{images/compare\_p}
+	\includegraphics[width=0.85\linewidth]{images/compare_p}
 	\caption{Tempo di esecuzione in funzione della probabilità di colorazione per gli algoritmi HK76 e naive.}
 	\label{fig:comparep}
 \end{figure}
+
 \noindent
-La Figura \ref{fig:comparep}, che mostra i tempi medi di esecuzione su $50$ iterazioni, evidenzia come l’algoritmo HK76 risulti nettamente migliore rispetto alla versione naive. Di seguito sono riportati i tempi medi di esecuzione:
+La Figura \ref{fig:comparep}, che mostra i tempi medi di esecuzione su $50$ iterazioni per ogni esperimento, evidenzia come l’algoritmo HK76 risulti più efficiente rispetto alla versione naive. 
+\\\\
+\noindent
+Di seguito sono riportati i tempi medi di esecuzione:
 
 \vspace{15px}
 \noindent

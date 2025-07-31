@@ -2,7 +2,7 @@
 Per analizzare il comportamento della probabilità di percolazione $P_{perc}$ in funzione della probabilità di occupazione dei siti $p_{col}$, è stata condotta una serie di simulazioni su reticoli quadrati di diverse dimensioni ($L = 100$, $300$ e $1000$). L’intervallo di $p_{col}$ considerato va da $0.55$ a $0.65$, con incrementi di $0.01$, in modo da esplorare con buona risoluzione la zona critica.
 \\\\
 \noindent
-Per ogni coppia di valori $(L, p_{col})$, l’esperimento è stato ripetuto $50$ volte, così da permettere una stima della probabilità di percolazione e del relativo errore. Ogni simulazione consiste nella generazione di un reticolo in cui ogni sito viene occupato con probabilità $p_{col}$. Una volta creato il reticolo, i cluster connessi di siti occupati sono stati individuati tramite l'algoritmo hk76. Successivamente, è stato verificato se esiste almeno un cluster che attraversa il reticolo da sinistra a destra (percolazione orizzontale) o dall’alto in basso (percolazione verticale).
+Per ogni coppia di valori $(L, p_{col})$, l’esperimento è stato ripetuto $50$ volte, così da permettere una stima della probabilità di percolazione e del relativo errore. Ogni simulazione consiste nella generazione di un reticolo in cui ogni sito viene occupato con probabilità $p_{col}$. Una volta creato il reticolo, i cluster connessi di siti occupati sono stati individuati tramite l'algoritmo \texttt{hk76}. Successivamente, è stato verificato se esiste almeno un cluster che attraversa il reticolo da sinistra a destra (percolazione orizzontale) o dall’alto in basso (percolazione verticale).
 \\\\
 \noindent
 Un confronto tra i risultati ottenuti nelle due direzioni ha permesso di confermare che, come previsto, tenendo conto dei relativi errori, la probabilità di percolazione orizzontale è la stessa di quella verticale.
@@ -84,7 +84,7 @@ Un confronto tra i risultati ottenuti nelle due direzioni ha permesso di conferm
 Per ogni dimensione del reticolo $L$ è stata stimata la soglia di percolazione $p_c$ come il valore della probabilità di colorazione $p_{col}$ per cui la probabilità di percolazione $P_{perc}$ raggiunge il valore $0.5$.
 \\\\
 \noindent
-Poiché i dati ottenuti tramite simulazione possono contenere duplicati (ad esempio valori estremi come $0.00$ e $1.00$), sono stati innanzitutto rimossi i punti ripetuti nei valori di $P_{perc}$.
+Poiché i dati ottenuti tramite simulazione possono contenere duplicati (ad esempio, valori estremi come $0.00$ e $1.00$), sono stati innanzitutto rimossi i punti ripetuti nei valori di $P_{perc}$.
 
 \begin{figure}[H]
 	\centering
